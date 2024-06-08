@@ -1,3 +1,3 @@
 # Tweetpic
 
-Twitter tweet screenshoter
+Tweet screenshoter
