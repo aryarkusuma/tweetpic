@@ -1,3 +1,3 @@
-# tweetpic
+# Tweetpic
 
-- Twitter tweet screenshot
+Twitter tweet screenshot
