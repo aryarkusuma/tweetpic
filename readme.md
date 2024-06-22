@@ -2,14 +2,14 @@
 
 TweetPic allows you to capture and serve images of a tweet. 
 
-//this was run in Debian 12
+//this was run in Linux/Debian 12 x64
 
 Require
 - go
 - chrome
 
-1. run chrome headless manually -> chromium --headless=old --disable-gpu --remote-debugging-port=9222
-2. bash build_run.sh (sudo) 
+1. manual chrome/ium headless with "chromium --headless=old --disable-gpu --remote-debugging-port=9222"
+2. bash build_run.sh (?sudo) 
 
 ## Endpoints
 ### 1. Get Tweet Picture
