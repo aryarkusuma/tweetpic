@@ -9,7 +9,7 @@ Notes
 - with https
 
 Require
-- go 1.22.3
+- go 1.19.8++
 - chrome
 
 1. manual chrome/ium headless with "chromium --headless=old --disable-gpu --remote-debugging-port=9222"
