@@ -101,4 +101,3 @@ Currently, the API does not require authentication. However, it's recommended to
 - Image files are stored in the `./images/` directory.
 - The server listens on port 443 for HTTPS connections.
 
-For any questions or issues, please contact the API support team.
