@@ -12,8 +12,9 @@ Require
 - go 1.19++
 - chrome
 
-1. manual chrome/ium headless with "chromium --headless=old --disable-gpu --remote-debugging-port=9222"
-2. bash build_run.sh (?sudo) 
+1. run manually chrome/ium headless devtools debugging remote with
+"chromium --headless=old --disable-gpu --remote-debugging-port=9222"
+3. bash build_run.sh (?sudo) 
 
 ## Endpoints
 ### 1. Get Tweet Picture
