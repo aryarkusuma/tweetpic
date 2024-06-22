@@ -74,14 +74,16 @@ func main() {
                         TweetPicUrl: data,
                 })
         })
-        app.Static("/", "./", fiber.Static{
-                Compress:      true,
-                ByteRange:     false,
-                Browse:        false,
-                Index:         "index.html",
-                CacheDuration: 10 * time.Second,
-                MaxAge:        3600,
-        })
+
+        // app.Static("/", "./", fiber.Static{
+        //         Compress:      true,
+        //         ByteRange:     false,
+        //         Browse:        false,
+        //         Index:         "index.html",
+        //         CacheDuration: 10 * time.Second,
+        //         MaxAge:        3600,
+        // })
+		
         // Start server
         log.Fatal(app.ListenTLS(":443", "./" + cert, "./" + key))
 }
