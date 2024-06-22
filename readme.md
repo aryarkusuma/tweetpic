@@ -13,7 +13,7 @@ Require
 - chrome
 
 1. run manually chrome/ium headless devtools debugging remote with
-"chromium --headless=old --disable-gpu --remote-debugging-port=9222"
+   - "chromium --headless=old --disable-gpu --remote-debugging-port=9222"
 3. bash build_run.sh (?sudo) 
 
 ## Endpoints
