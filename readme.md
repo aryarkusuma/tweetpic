@@ -9,7 +9,7 @@ Require
 - chrome
 
 1. run chrome headless manually -> chromium --headless=old --disable-gpu --remote-debugging-port=9222
-2. bash run.sh (sudo) 
+2. bash build_run.sh (sudo) 
 
 ## Endpoints
 ### 1. Get Tweet Picture
