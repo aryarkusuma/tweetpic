@@ -2,10 +2,10 @@
 
 TweetPic allows you to capture and serve images of a tweet. 
 
-tweetpic.taila9d411.ts.net
-//this was run in Linux/Debian 12 x64
-//filled .env
-//with https
+- example - visit tweetpic.taila9d411.ts.net
+- this was run in Linux/Debian 12 x64
+- filled .env
+- with https
 
 Require
 - go
