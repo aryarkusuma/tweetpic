@@ -2,18 +2,21 @@
 
 TweetPic allows you to capture and serve images of a tweet. 
 - visit [Tweetpic](https://tweetpic.taila9d411.ts.net/)
+- [Notion Tweetpic](https://maze-marlin-a5b.notion.site/Tweet-X-Screenshoter-96fceedd92b1479a81649f0d4f1a7ee8)
 
+  
 Notes
-- this was run in Linux/Debian 12 x64
+- this was run in Linux/Debian 12-64
 - filled .env
 - with https
 
 Require
-- go
+- go 1.19++
 - chrome
 
-1. manual chrome/ium headless with "chromium --headless=old --disable-gpu --remote-debugging-port=9222"
-2. bash build_run.sh (?sudo) 
+1. run manually chrome/ium headless devtools debugging remote with
+   - "chromium --headless=old --disable-gpu --remote-debugging-port=9222"
+3. bash build_run.sh (?sudo) 
 
 ## Endpoints
 ### 1. Get Tweet Picture
