@@ -1,7 +1,7 @@
 # TweetPic 
 
 TweetPic allows you to capture and serve images of a tweet. 
--visit [Tweetpic](https://tweetpic.taila9d411.ts.net/)
+- visit [Tweetpic](https://tweetpic.taila9d411.ts.net/)
 
 Notes
 - this was run in Linux/Debian 12 x64
