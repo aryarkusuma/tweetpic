@@ -2,8 +2,16 @@
 
 TweetPic allows you to capture and serve images of a tweet. 
 
-## Endpoints
+//this was run in Debian 12
 
+Require
+- go
+- chrome
+
+1. run chrome headless manually -> chromium --headless=old --disable-gpu --remote-debugging-port=9222
+2. bash run.sh (sudo) 
+
+## Endpoints
 ### 1. Get Tweet Picture
 
 Retrieves a picture of a specified tweet.
@@ -83,22 +91,9 @@ Checks the health status of the API.
     }
     ```
 
-## Error Handling
-
-The API uses standard HTTP status codes to indicate the success or failure of requests. In case of errors, a JSON response with an "Error" field is typically returned.
-
-## Rate Limiting
-
-A rate limit is applied to the `/tweetpic` endpoint to prevent abuse. If you exceed the rate limit, you'll receive a 429 Too Many Requests response.
-
-## Security
-
-Currently, the API does not require authentication. However, it's recommended to use HTTPS for all requests to ensure data privacy and integrity.
-
 ## Additional Notes
 
 - The API serves static files from the root directory.
-- Image files are stored in the `./images/` directory.
+- Tweet screenshot image files are stored in the `./images/` directory.
 - The server listens on port 443 for HTTPS connections.
 
-For any questions or issues, please contact the API support team.
