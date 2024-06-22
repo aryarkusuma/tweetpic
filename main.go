@@ -75,15 +75,11 @@ func main() {
                 })
         })
 
-        // app.Static("/", "./", fiber.Static{
-        //         Compress:      true,
-        //         ByteRange:     false,
-        //         Browse:        false,
-        //         Index:         "index.html",
-        //         CacheDuration: 10 * time.Second,
-        //         MaxAge:        3600,
-        // })
-		
+       
+        // app.Get("/file-with-url-chars", func(c *fiber.Ctx) error {
+        //         return c.SendFile(./index.html)
+        //       })
+
         // Start server
         log.Fatal(app.ListenTLS(":443", "./" + cert, "./" + key))
 }
@@ -96,7 +92,7 @@ func serveImage(c *fiber.Ctx) error {
         }
 
         // Path to the image file in the tweetpic/images directory
-        imagePath := filepath.Join("./images", imageName)
+        imagePath := filepath.Join("./image", filepath.Clean("/" + imageName))
 
         // Open the image file
         file, err := os.Open(imagePath)
