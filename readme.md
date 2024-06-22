@@ -6,7 +6,7 @@ TweetPic allows you to capture and serve images of a tweet.
 
   
 Notes
-- this was run in Linux/Debian 12 x64
+- this was run in Linux/Debian 12-64
 - filled .env
 - with https
 
