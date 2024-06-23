@@ -187,7 +187,7 @@ func TweetPicWorker(tweetId string, imgName string) {
                 log.Fatalf("Failed to screenshot: %v", err)
         }
 
-        filepath := "./images" + filepath.clean("/" +imgName)
+        filepath := "./images" + filepath.Clean("/" +imgName)
         err = os.WriteFile(filepath, ss, 0644)
         if err != nil {
                 log.Fatalf("Failed to save screenshot: %v", err)
