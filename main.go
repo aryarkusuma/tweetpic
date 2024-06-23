@@ -92,14 +92,14 @@ func serveImage(c *fiber.Ctx) error {
         }
 
         // Path to the image file in the tweetpic/images directory
-        imagePath := filepath.Join("./image", filepath.Clean("/" + imageName))
+        imagePath := "./image" + filepath.Clean("/" + imageName)
 
         // Open the image file
         file, err := os.Open(imagePath)
         if err != nil {
                 return fiber.NewError(fiber.StatusNotFound, "File not found.")
         }
-        defer file.Close()
+        file.Close()
 
         // Determine content type based on file extension
         contentType := "image/jpeg"
@@ -123,6 +123,7 @@ func serveImage(c *fiber.Ctx) error {
         // Set the content type header and send the image data
         c.Set("Content-Type", contentType)
         c.Write(imgData)
+        file.Close()
         return nil
 }
 func TweetPic(tweetId string) (string, error) {
