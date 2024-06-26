@@ -34,7 +34,7 @@ func main() {
         cert := os.Getenv("HTTPS_CERT")
         key := os.Getenv("HTTPS_KEY")
 
-        //indexHtml := io.ReadFile("./index.html")
+        //indexHtml := os.ReadFile("./index.html")
 
         app := fiber.New()
         app.Use(logger.New())
