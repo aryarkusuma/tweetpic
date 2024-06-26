@@ -34,6 +34,8 @@ func main() {
         cert := os.Getenv("HTTPS_CERT")
         key := os.Getenv("HTTPS_KEY")
 
+        //indexHtml := io.ReadFile("./index.html")
+
         app := fiber.New()
         app.Use(logger.New())
 
@@ -77,7 +79,8 @@ func main() {
 
        
         // app.Get("/file-with-url-chars", func(c *fiber.Ctx) error {
-        //         return c.SendFile(./index.html)
+        //         c.Set("Content-Type", "text/plain")
+        //         return c.Send(indexHtml)
         //       })
 
         // Start server
@@ -99,7 +102,6 @@ func serveImage(c *fiber.Ctx) error {
         if err != nil {
                 return fiber.NewError(fiber.StatusNotFound, "File not found.")
         }
-        file.Close()
 
         // Determine content type based on file extension
         contentType := "image/jpeg"
