@@ -92,7 +92,7 @@ func serveImage(c *fiber.Ctx) error {
         }
 
         // Path to the image file in the tweetpic/images directory
-        imagePath := "./image" + filepath.Clean("/" + imageName)
+        imagePath := "./images" + filepath.Clean("/" + imageName)
 
         // Open the image file
         file, err := os.Open(imagePath)
@@ -187,7 +187,7 @@ func TweetPicWorker(tweetId string, imgName string) {
                 log.Fatalf("Failed to screenshot: %v", err)
         }
 
-        filepath := "./images" + filepath.clean("/" +imgName)
+        filepath := "./images/" + imgName
         err = os.WriteFile(filepath, ss, 0644)
         if err != nil {
                 log.Fatalf("Failed to save screenshot: %v", err)
