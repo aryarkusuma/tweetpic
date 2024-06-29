@@ -93,40 +93,10 @@ func serveImage(c *fiber.Ctx) error {
         if imageName == "" {
                 return fiber.NewError(fiber.StatusBadRequest, "Image name not specified.")
         }
-
         // Path to the image file in the tweetpic/images directory
         imagePath := "./images" + filepath.Clean("/" + imageName)
-
-        // Open the image file
-        file, err := os.Open(imagePath)
-        if err != nil {
-                return fiber.NewError(fiber.StatusNotFound, "File not found.")
-        }
-
-        // Determine content type based on file extension
-        contentType := "image/jpeg"
-        switch ext := filepath.Ext(imagePath); ext {
-        case ".png":
-                contentType = "image/png"
-        case ".gif":
-                contentType = "image/gif"
-        case ".jpeg", ".jpg":
-                contentType = "image/jpeg"
-        default:
-                contentType = "application/octet-stream"
-        }
-
-        // Read the file content
-        imgData, err := io.ReadAll(file)
-        if err != nil {
-                return fiber.NewError(fiber.StatusInternalServerError, "Error reading file.")
-        }
-
-        // Set the content type header and send the image data
-        c.Set("Content-Type", contentType)
-        c.Write(imgData)
-        file.Close()
-        return nil
+        
+        return c.SendFile(imagePath)
 }
 func TweetPic(tweetId string) (string, error) {
         //check if the tweet is exist
