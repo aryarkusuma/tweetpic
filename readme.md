@@ -6,7 +6,7 @@ TweetPic allows you to capture and serve images of a tweet.
 
   
 Notes
-- this was http-dockerized version of the main branch
+- this is http-dockerized version of the main branch
 
 ## Endpoints
 ### 1. Get Tweet Picture
