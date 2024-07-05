@@ -1,7 +1,6 @@
 package main
 import (
         "fmt"
-        "io"
         "log"
         "os"
         "path/filepath"
@@ -16,8 +15,7 @@ import (
         "github.com/gofiber/fiber/v2/middleware/logger"
         "github.com/google/uuid"
         "github.com/valyala/fasthttp"
-        "github.com/joho/godotenv"
-
+       
 )
 
 type Response struct {
