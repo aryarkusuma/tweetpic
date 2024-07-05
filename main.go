@@ -26,18 +26,9 @@ type Response struct {
 
 func main() {
 
-        err := godotenv.Load()
-                if err != nil {
-                log.Fatal("Error loading .env file")
-        }
-
-        cert := os.Getenv("HTTPS_CERT")
-        key := os.Getenv("HTTPS_KEY")
-
-        //indexHtml := os.ReadFile("./index.html")
-
         app := fiber.New()
         app.Use(logger.New())
+
 
         // Rate limiter middleware
         app.Use("/tweetpic", limiter.New(limiter.Config{
@@ -84,7 +75,7 @@ func main() {
         //       })
 
         // Start server
-        log.Fatal(app.ListenTLS(":443", "./" + cert, "./" + key))
+        log.Fatal(app.Listen(":8080"))
 }
 
 func serveImage(c *fiber.Ctx) error {
@@ -131,7 +122,7 @@ func TweetCheck(tweetId string) (int, error) {
 
 func TweetPicWorker(tweetId string, imgName string) {
         //Get running chrome dev remote address
-        u := launcher.MustResolveURL("")
+        u := launcher.MustResolveURL("chrome:9222")
 
         //open,load and rendering a page of the embeded api
         page := rod.New().ControlURL(u).MustConnect().MustPage("https://platform.twitter.com/embed/Tweet.html?id=" + tweetId).MustSetViewport(1920, 2000, 1, false)
@@ -168,8 +159,6 @@ func TweetPicWorker(tweetId string, imgName string) {
         page.MustClose()
 
 }
-
-
 
 
 

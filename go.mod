@@ -1,6 +1,8 @@
 module github.com/aryarkusuma/tweetpic
 
-go 1.19
+go 1.21
+
+toolchain go1.22.3
 
 require (
 	github.com/go-rod/rod v0.116.1
