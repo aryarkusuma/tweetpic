@@ -2,7 +2,7 @@
 
 TweetPic allows you to capture and serve images of a tweet. 
 - visit [Tweetpic](https://tweetpic.aryarkusuma.my.id) (kalo mau nyoba2 endpoint)
-- [Notion Tweetpic](https://maze-marlin-a5b.notion.site/Tweet-X-Screenshoter-96fceedd92b1479a81649f0d4f1a7ee8)
+- [Notion Tweetpic](https://aryarkusuma.notion.site/Tweet-X-Public-Screenshoter-96fceedd92b1479a81649f0d4f1a7ee8)
 
   
 Notes
